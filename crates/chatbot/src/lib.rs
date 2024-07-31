@@ -22,7 +22,7 @@ pub async fn gen_random_number() -> usize {
 ///
 /// Warning: may take a few seconds!
 pub async fn query_chat(_messages: &[String]) -> Vec<String> {
-    tokio::time::sleep(Duration::from_secs(2)).await;
+    std::thread::sleep(Duration::from_secs(2));
     vec![
         "And how does that make you feel?".to_string(),
         "Interesting! Go on...".to_string(),
